@@ -79,9 +79,10 @@ void check_requirements( const int argc, const char * const argv[] )
         throw runtime_error( string( argv[ 0 ] ) + ": needs to be installed setuid root" );
     }
 
-    if ( (getuid() == 0) || (getgid() == 0) ) {
-        throw runtime_error( string( argv[ 0 ] ) + ": please run as non-root" );
-    }
+// remove root check
+//     if ( (getuid() == 0) || (getgid() == 0) ) {
+//         throw runtime_error( string( argv[ 0 ] ) + ": please run as non-root" );
+//     }
 
     /* verify environment has been cleared */
     if ( environ ) {
