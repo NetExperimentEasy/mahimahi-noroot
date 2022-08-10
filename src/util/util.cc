@@ -85,9 +85,9 @@ void check_requirements( const int argc, const char * const argv[] )
 //     }
 
     /* verify environment has been cleared */
-    if ( environ ) {
-        throw runtime_error( "BUG: environment not cleared in sensitive region" );
-    }
+//     if ( environ ) {
+//         throw runtime_error( "BUG: environment not cleared in sensitive region" );
+//     }
 
     /* verify IP forwarding is enabled */
     FileDescriptor ipf( SystemCall( "open /proc/sys/net/ipv4/ip_forward",
